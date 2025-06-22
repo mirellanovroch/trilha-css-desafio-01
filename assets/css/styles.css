@@ -5,131 +5,231 @@ Isso é comum para remover estilos padrão dos navegadores para garantir
 uma aparência consistente em diferentes navegadores. */
 
 body {
-    background-color: black;
-    /* Define a cor de fundo de todo o corpo da página como preto. */
+  background-color: black;
+  /* Define a cor de fundo de todo o corpo da página como preto. */
 }
 
 h2 {
-    font-size: 40px;
-    color: #33A8DB;
-    font-weight: bold;
-    letter-spacing: 4px;
-    /* Espaçamento entre as letras dos títulos <h2>.*/
-    text-transform: uppercase;
-    /* Transforma todo o texto para letras maiúsculas. */
-    margin-bottom: 24px;
-    /* Adiciona uma margem de abaixo. */
+  font-size: 40px;
+  color: #33A8DB;
+  font-weight: bold;
+  letter-spacing: 4px;
+  /* Espaçamento entre as letras dos títulos <h2>.*/
+  text-transform: uppercase;
+  /* Transforma todo o texto para letras maiúsculas. */
+  margin-bottom: 24px;
+  /* Adiciona uma margem de abaixo. */
 }
 
 p {
-    color: white;
-    /* Cor do texto para todos os parágrafos. */
+  color: white;
+  /* Cor do texto para todos os parágrafos. */
 }
 
+/* Head */
+
 section {
-    /* Define uma margem de acima e abaixo de todas as seções <section>.
+  /* Define uma margem de acima e abaixo de todas as seções <section>.
        'auto' nas margens laterais centraliza o elemento horizontalmente na página,
        desde que ele tenha uma largura definida. */
-    margin: 100px auto;
+  margin: 100px auto;
 }
 
 .banner {
-    /* Define uma imagem de fundo para elementos com a classe 'banner'.
+  /* Define uma imagem de fundo para elementos com a classe 'banner'.
        Usa um gradiente linear (linear-gradient) sobre a imagem para criar um efeito de sobreposição.
        As cores RGBA permitem definir a transparência (o último valor, de 0 a 1).
        A imagem 'banner.png' é carregada de um diretório 'images' relativo ao CSS. */
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(6, 142, 201, 0.2), rgba(0, 0, 0, .6)), url('../images/banner.png');
+  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(6, 142, 201, 0.2), rgba(0, 0, 0, .6)), url('../images/banner.png');
 
-    background-size: cover;
-    /* Imagem de fundo cobre toda a área. */
-    background-repeat: no-repeat;
-    /* Impede que a imagem de fundo se repita. */
-    height: 600px;
-    /* Define a altura do banner. */
-    padding-top: 60px;
-    /* Margem topo interno do banner. */
-    border-bottom: 1px solid #33A8DB80;
-    /* Adiciona uma borda inferior. */
+  background-size: cover;
+  /* Imagem de fundo cobre toda a área. */
+  background-repeat: no-repeat;
+  /* Impede que a imagem de fundo se repita. */
+  height: 600px;
+  /* Define a altura do banner. */
+  padding-top: 60px;
+  /* Margem topo interno do banner. */
+  border-bottom: 1px solid #33A8DB80;
+  /* Adiciona uma borda inferior. */
 }
 
 .banner .banner-content {
-    color: white;
-    /* Cor do texto dentro do elemento com a classe 'banner-content' (que está dentro do .banner). */
-    width: 600px;
-    /* Define a largura do conteúdo do banner. */
-    margin: auto;
-    /* Centraliza o conteúdo do banner horizontalmente. */
-    text-align: center;
-    /* Alinha o texto ao centro. */
+  color: white;
+  /* Cor do texto dentro do elemento com a classe 'banner-content' (que está dentro do .banner). */
+  width: 600px;
+  /* Define a largura do conteúdo do banner. */
+  margin: auto;
+  /* Centraliza o conteúdo do banner horizontalmente. */
+  text-align: center;
+  /* Alinha o texto ao centro. */
 }
 
 .banner h1 {
-    font-size: 40px;
-    /* Tamanho da fonte para títulos dentro do banner. */
-    font-weight: 900;
-    /* Espessura da fonte. */
-    text-transform: uppercase;
-    /* Transforma todo o texto para letras maiúsculas. */
+  font-size: 40px;
+  /* Tamanho da fonte para títulos dentro do banner. */
+  font-weight: 900;
+  /* Espessura da fonte. */
+  text-transform: uppercase;
+  /* Transforma todo o texto para letras maiúsculas. */
 
-    /* Cria um gradiente de cor para o texto. '-webkit-' é um prefixo de fornecedor para garantir compatibilidade com navegadores baseados em WebKit (como Chrome e Safari). */
-    background: -webkit-linear-gradient(#33A8DB, #1472B7);
+  /* Cria um gradiente de cor para o texto. '-webkit-' é um prefixo de fornecedor para garantir compatibilidade com navegadores baseados em WebKit (como Chrome e Safari). */
+  background: -webkit-linear-gradient(#33A8DB, #1472B7);
 
-    /* Corta o fundo do elemento para o formato do texto, fazendo o gradiente de fundo aparecer apenas nas letras. */
-    -webkit-background-clip: text;
-
-    /* Torna a cor do texto transparente, permitindo que o gradiente de fundo (definido acima) seja visível através dele. */
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; /* Versão para navegadores WebKit (Chrome, Safari, etc.) */
+  background-clip: text; /* Versão padrão para todos os navegadores (adicionar esta linha!) */
+ 
+  /* Torna a cor do texto transparente, permitindo que o gradiente de fundo (definido acima) seja visível através dele. */
+  -webkit-text-fill-color: transparent;
 }
 
 .banner p {
-    font-size: 20px;
-    margin: 16px 0 24px;
-    /* Margens: acima, nas esquerda, direita e abaixo dos parágrafos. */
+  font-size: 20px;
+  margin: 16px 0 24px;
+  /* Margens: acima, nas esquerda, direita e abaixo dos parágrafos. */
 }
 
 .banner .logo {
-    background-color: rgba(0, 0, 0, .2);
-    /* Define a cor de fundo do logo, com opacidade (.2). */
-    height: 260px;
-    /* Altura do logo. */
-    width: 260px;
-    /* Largura do logo. */
-    margin: auto;
-    /* Centraliza o logo horizontalmente. */
-    border-radius: 50%;
-    /* Faz com que o elemento tenha um formato completamente arredondado. */
-    padding: 16px;
-    /* Adiciona um preenchimento dentro do logo. */
-    margin-bottom: 16px;
-    /* Adiciona uma margem abaixo do logo. */
+  background-color: rgba(0, 0, 0, .2);
+  /* Define a cor de fundo do logo, com opacidade (.2). */
+  height: 260px;
+  /* Altura do logo. */
+  width: 260px;
+  /* Largura do logo. */
+  margin: auto;
+  /* Centraliza o logo horizontalmente. */
+  border-radius: 50%;
+  /* Faz com que o elemento tenha um formato completamente arredondado. */
+  padding: 16px;
+  /* Adiciona um preenchimento dentro do logo. */
+  margin-bottom: 16px;
+  /* Adiciona uma margem abaixo do logo. */
 }
 
 .banner .logo img {
-    margin: auto;
-    /* Tenta centralizar a imagem dentro do logo (pode precisar de display: flex ou grid no pai para funcionar bem). */
-    width: 100%;
-    /* Faz com que a imagem ocupe 100% da largura do seu contêiner pai. */
-    height: 100%;
-    /* Faz com que a imagem ocupe 100% da altura do seu contêiner pai. */
-    object-fit: contain;
-    /* Redimensiona a imagem para caber no contêiner, mantendo sua proporção (aspect ratio) e sem cortar a imagem. */
+  margin: auto;
+  /* Tenta centralizar a imagem dentro do logo (pode precisar de display: flex ou grid no pai para funcionar bem). */
+  width: 100%;
+  /* Faz com que a imagem ocupe 100% da largura do seu contêiner pai. */
+  height: 100%;
+  /* Faz com que a imagem ocupe 100% da altura do seu contêiner pai. */
+  object-fit: contain;
+  /* Redimensiona a imagem para caber no contêiner, mantendo sua proporção (aspect ratio) e sem cortar a imagem. */
 }
 
 .banner .banner-content button {
-    color: #31A8DD;
-    /* Define a cor do texto do botão. */
-    font-size: 16px;
-    /* Tamanho da fonte do botão. */
-    font-weight: bold;
-    /* Deixa o texto do botão em negrito. */
-    padding: 16px 32px;
-    /* Adiciona preenchimento interno ao botão: na parte superior e inferior e nas laterais. */
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    background-color: transparent;
-    border-image: linear-gradient(#3BA1CD, #1572B7);
-    /* Cria uma borda com um gradiente linear. 
+  color: #31A8DD;
+  /* Define a cor do texto do botão. */
+  font-size: 16px;
+  /* Tamanho da fonte do botão. */
+  font-weight: bold;
+  /* Deixa o texto do botão em negrito. */
+  padding: 16px 32px;
+  /* Adiciona preenchimento interno ao botão: na parte superior e inferior e nas laterais. */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: transparent;
+  border-image: linear-gradient(#3BA1CD, #1572B7);
+  /* Cria uma borda com um gradiente linear. 
     Isso substitui a propriedade 'border'. */
-    border-image-slice: 10;
-    /* Controla como a imagem da borda é "fatiada" para preencher a borda. */
+  border-image-slice: 10;
+  /* Controla como a imagem da borda é "fatiada" para preencher a borda. */
+}
+
+/* Main */
+#course-content {
+  width: 800px;
+  /* DLargura da seção como 800 pixels */
+  text-align: center;
+  /* Centraliza todo o texto. */
+}
+
+#course-content .modules-list {
+  margin: 24px 0;
+  /* Adiciona uma margem em acima e abaixo e nas laterais */
+}
+
+#course-content .modules-list .module {
+  color: white;
+  width: 530px;
+  margin: 0 auto 24px;
+  border: 1px solid #33A8DB;
+  /* Borda sólida */
+  background-color: #252525;
+  /* Cor de fundo */
+  padding: 16px;
+  /* Preenchimento interno em todas as direções. */
+  border-radius: 100px;
+  /* Arredonda os cantos. */
+  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+  /* Sombra interna para dar um efeito de profundidade */
+}
+
+/* Estilos para um elemento span (geralmente usado para destacar texto).*/
+#course-content .modules-list .module span {
+  color: #33A8DB;
+  /* Define a cor do texto do span, destacando-o. */
+}
+
+#transform-world {
+  height: 500px;
+  /* Altura da seção. */
+  background-size: cover;
+  /* Imagem de fundo cubra toda a área. */
+  background-image: url(../images/woman-code.png);
+  background-attachment: fixed;
+  /* Imagem de fundo permanecer fixa ao rolar a página (efeito parallax) */
+  border-bottom: 1px solid #33A8DB80;
+  /* Borda inferior.*/
+  border-top: 1px solid #33A8DB80;
+  /* Brda superior. */
+  padding: 200px;
+  /* Preenchimento interno em todas as direções. */
+}
+
+#transform-world p {
+  font-weight: 900;
+  font-size: 40px;
+  text-transform: lowercase;
+  max-width: 250px;
+  /* Largura máxima do parágrafo. */
+  text-shadow: 3px 2px #33A8DB;
+  /* Sombra azul ao texto. */
+}
+
+#professional-challenges {
+  text-align: center;
+  /* Centraliza todo o texto dentro desta seção */
+  width: 800px;
+  /* Largura da seção. */
+}
+
+#professional-challenges img {
+  margin: 32px 0;
+  /* Margem acima, abaixo e nas laterais */
+}
+
+/* Footer */
+footer {
+  padding: 60px 0;
+  /* Adiciona  espaço interno (preenchimento) na parte superior e inferior do rodapé, e nas laterais. */
+  text-align: center;
+  /* Cria um degradê linear no fundo do rodapé: */
+  background-image: linear-gradient(rgba(50, 168, 219, 0),
+      /* Começa com uma cor bem transparente (quase invisível) */
+      rgba(50, 168, 219, 0.2)
+      /* Termina com a mais um pouco mais visível. */
+    );
+    border-top: 1px solid #33A8DB80;
+}
+
+footer .dio-logo {
+  width: 300px;
+}
+
+footer a {
+  color: #33A8DB;
+  font-weight: bold;
+  text-decoration: none;
+  /* Remove o sublinhado padrão que os links costumam ter. */
 }
